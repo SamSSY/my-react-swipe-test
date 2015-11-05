@@ -4,9 +4,28 @@
 	<meta charset="UTF-8">
 	<title>my react swipe</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+	<!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
 	<div id="root"></div>
-	<script src="/static/bundle.js"></script>
+	<script src="./dist/bundle.js"></script>
+	<script>
+		var l1 =$('#one').position();
+		var l2 =$('#two').position();
+		var l3 =$('#three').position();
+		var l4 =$('#four').position();
+		var l5 =$('#five').position();
+		var l6 =$('#six').position();
+		var l7 =$('#seven').position();
+    	console.log(l1);
+    	console.log(l2);
+    	console.log(l3);
+    	console.log(l4);
+    	console.log(l5);
+    	console.log(l6);
+    	console.log(l7);
+
+	</script>
 </body>
 </html>
