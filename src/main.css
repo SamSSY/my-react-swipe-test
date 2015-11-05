@@ -12,6 +12,7 @@ html, body{
 	line-height: 400px;
 	font-size: 80px;
 	text-align: center;
+	display: inline-block;
 }
 
 
