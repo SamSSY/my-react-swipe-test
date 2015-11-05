@@ -2,16 +2,18 @@ const React = require('react');
 const { render } = require('react-dom');
 const ReactSwipe = require('react-swipe');
 
+require('./main.css');
+
 const initialState = {
 	contents :[ 
-		{content: 'aaaa'},
-		{content: 'bbbb'},
-		{content: 'ccccc'},
-		{content: 'ric'},
-		{content: 'sam'},
-		{content: 'michael'},
-		{content: 'ray'},
-		{content: 'david'}
+		{content: 'one'},
+		{content: 'two'},
+		{content: 'three'},
+		{content: 'four'},
+		{content: 'five'},
+		{content: 'six'},
+		{content: 'seven'},
+		{content: 'eight'}
 	]
 }
 
@@ -19,7 +21,7 @@ class SwipePane extends React.Component{
 	render(){
 		const {paneContent, paneIndex} = this.props;
 		return(
-			<div>
+			<div className='pane'  id = { paneContent }>
 				{paneContent}
 			</div>
 		);

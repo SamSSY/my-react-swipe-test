@@ -1,0 +1,48 @@
+html, body{
+	height: 100%;
+}
+
+#root{
+	height:100%;
+}
+
+.pane{
+	height: 400px;
+	line-height: 400px;
+	font-size: 80px;
+	text-align: center;
+}
+
+
+#one{
+	background-color: green;
+}
+
+#two{
+	background-color:yellow;
+}
+
+#three{
+	background-color:red;
+}
+
+#four{
+	background-color:blue;
+}
+
+#five{
+	background-color: white;
+}
+
+#six{
+	background-color: #FFA1FF;
+}
+
+#seven{
+	background-color: #99FFCC;
+}
+
+#eight{
+	background-color: #FFFFDA;
+}
+
