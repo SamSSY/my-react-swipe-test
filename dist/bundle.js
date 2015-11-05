@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d92bbc2fb2a33365e20e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ed08fb859f2989aeef4b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -1568,7 +1568,7 @@
 /* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("exports = module.exports = __webpack_require__(171)();\n// imports\n\n\n// module\nexports.push([module.id, \"html, body{\\n\\theight: 100%;\\n}\\n\\n#root{\\n\\theight:100%;\\n}\\n\\n.pane{\\n\\ttop:0;\\n\\theight: 400px;\\n\\tline-height: 400px;\\n\\tfont-size: 80px;\\n\\ttext-align: center;\\n\\tdisplay: inline-block;\\n}\\n\\n\\n#one{\\n\\tbackground-color: green;\\n}\\n\\n#two{\\n\\tbackground-color:yellow;\\n}\\n\\n#three{\\n\\tbackground-color:red;\\n}\\n\\n#four{\\n\\tbackground-color:blue;\\n}\\n\\n#five{\\n\\tbackground-color: white;\\n}\\n\\n#six{\\n\\tbackground-color: #FFA1FF;\\n}\\n\\n#seven{\\n\\tbackground-color: #99FFCC;\\n}\\n\\n#eight{\\n\\tbackground-color: #FFFFDA;\\n}\\n\\n\", \"\"]);\n\n// exports\n\n\n/*****************\n ** WEBPACK FOOTER\n ** ./~/css-loader!./src/main.css\n ** module id = 170\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/main.css?./~/css-loader");
+	eval("exports = module.exports = __webpack_require__(171)();\n// imports\n\n\n// module\nexports.push([module.id, \"html, body{\\n\\theight: 100%;\\n}\\n\\n#root{\\n\\theight:100%;\\n}\\n\\n.pane{\\n\\theight: 400px;\\n\\tline-height: 400px;\\n\\tfont-size: 80px;\\n\\ttext-align: center;\\n\\tdisplay: inline-block;\\n}\\n\\n\\n#one{\\n\\tbackground-color: green;\\n}\\n\\n#two{\\n\\tbackground-color:yellow;\\n}\\n\\n#three{\\n\\tbackground-color:red;\\n}\\n\\n#four{\\n\\tbackground-color:blue;\\n}\\n\\n#five{\\n\\tbackground-color: white;\\n}\\n\\n#six{\\n\\tbackground-color: #FFA1FF;\\n}\\n\\n#seven{\\n\\tbackground-color: #99FFCC;\\n}\\n\\n#eight{\\n\\tbackground-color: #FFFFDA;\\n}\\n\\n\", \"\"]);\n\n// exports\n\n\n/*****************\n ** WEBPACK FOOTER\n ** ./~/css-loader!./src/main.css\n ** module id = 170\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/main.css?./~/css-loader");
 
 /***/ },
 /* 171 */
