@@ -44,10 +44,12 @@ class SwipeBody extends React.Component {
 
     render() {
     	const contents = this.state.contents;
-        return (  
-        	<ReactSwipe>
-        		{contents.map(this.renderSwipePane, this)}
-        	</ReactSwipe>
+        return ( 
+        	<div> 
+        		<ReactSwipe >
+        			{contents.map(this.renderSwipePane, this)}
+        		</ReactSwipe>
+        	</div>
         );
     }
 }
