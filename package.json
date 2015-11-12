@@ -23,7 +23,13 @@
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-swipe": "^3.0.0",
-    "swipe-js-iso": "^2.0.1"
+    "swipe-js-iso": "^2.0.1",
+    "material-ui": "^0.13.0",
+    "react-tap-event-plugin": "^0.2.1",
+    "react-addons-create-fragment": "^0.14.0",
+    "react-addons-pure-render-mixin": "^0.14.0",
+    "react-addons-transition-group": "^0.14.0",
+    "react-addons-update": "^0.14.0"
   },
   "devDependencies": {
     "babel-core": "^5.8.29",
@@ -31,9 +37,11 @@
     "babel-plugin-react-transform": "^1.1.1",
     "css-loader": "^0.21.0",
     "express": "^4.13.3",
+    "node-sass": "^3.4.1",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.1.1",
+    "sass-loader": "^3.1.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.2.0",
