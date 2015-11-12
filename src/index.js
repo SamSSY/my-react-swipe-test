@@ -27,7 +27,7 @@ class SwipePane extends React.Component{
         function swipeRightHandler( event ){
             
             $(this).animate({
-                right: '-1000px',
+                right: '-3000px',
              }, 200, function(){
                 $(this).addClass('hidden');
              });
@@ -35,7 +35,7 @@ class SwipePane extends React.Component{
 
         function swipeLeftHandler( event ){
             $(this).animate({
-                left: '-1000px'
+                left: '-3000px'
              }, 200, function(){
                 $(this).addClass('hidden');
              });
