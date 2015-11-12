@@ -2,7 +2,7 @@ const React = require('react');
 const { render } = require('react-dom');
 const ReactSwipe = require('react-swipe');
 
-require('./main.css');
+require('./main.scss');
 
 const initialState = {
 	contents :[ 
@@ -18,7 +18,31 @@ const initialState = {
 }
 
 class SwipePane extends React.Component{
-	render(){
+	
+    componentDidMount(){
+   
+        $( ".pane" ).on( "swiperight", swipeRightHandler );
+        $( ".pane" ).on( "swipeleft", swipeLeftHandler );
+
+        function swipeRightHandler( event ){
+            
+            $(this).animate({
+                right: '-1000px',
+             }, 200, function(){
+                $(this).addClass('hidden');
+             });
+        }
+
+        function swipeLeftHandler( event ){
+            $(this).animate({
+                left: '-1000px'
+             }, 200, function(){
+                $(this).addClass('hidden');
+             });
+        }
+
+    }
+    render(){
 		const {paneContent, paneIndex} = this.props;
 		return(
 			<div className='pane'  id = { paneContent }>
@@ -46,9 +70,7 @@ class SwipeBody extends React.Component {
     	const contents = this.state.contents;
         return ( 
         	<div> 
-        		<ReactSwipe >
-        			{contents.map(this.renderSwipePane, this)}
-        		</ReactSwipe>
+        		{contents.map(this.renderSwipePane, this)}
         	</div>
         );
     }

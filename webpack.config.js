@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: '/dist/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -24,6 +24,12 @@ module.exports = {
     }, {
       test: /\.css$/,
       loaders: ['style', 'css']
+    },{
+      test: /\.scss$/,
+      loaders: ["style", "css", "sass"]
     }]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "./src")]
   }
 };

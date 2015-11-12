@@ -14,6 +14,8 @@ html, body{
 	line-height: 400px;
 	font-size: 80px;
 	text-align: center;
+	display: inline-block;
+	width: 100%;
 }
 
 
@@ -51,4 +53,16 @@ html, body{
 
 button{
 	position: fixed;
+}
+
+
+/* viewport support*/
+@-ms-viewport {
+   width: device-width;
+}
+@-o-viewport { 
+   width: device-width;
+}
+@viewport {
+   width: device-width; 
 }
