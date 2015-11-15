@@ -34,7 +34,6 @@ class SwipePane extends React.Component{
     componentDidMount(){
 
         const {updateIndex, paneIndex} = this.props;
-        console.log("componentDidMount");
         
         $( ".pane" ).hammer().on( "swiperight", swipeRightHandler );
         $( ".pane" ).hammer().on( "swipeleft", swipeLeftHandler );
@@ -52,16 +51,17 @@ class SwipePane extends React.Component{
 
         function swipeLeftHandler( event ){
             $(this).animate({
-                left: '-3000px'
+                right: '3000px'
              }, 200, function(){
                 //$(this).addClass('hidden');
                 updateIndex(1);
-                $(this).css("left", "0");
+                $(this).css("right", "0");
              });
         }
 
         function tapHandler(){
             console.log("tapped!");
+            console.log($(".pane" ).css("left"));
         }
     }
     render(){
