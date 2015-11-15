@@ -21,32 +21,31 @@ injectTapEventPlugin();
 require('./main.scss');
 
 const initialState = {
-	contents :[ 
-		{content: 'one'},
-		{content: 'two'},
-		{content: 'three'},
-		{content: 'four'},
-		{content: 'five'},
-		{content: 'six'},
-		{content: 'seven'},
-		{content: 'eight'}
-	],
     muiTheme: ThemeManager.getMuiTheme(LightRawTheme),
+    currentIndex : 0
 }
 
 class SwipePane extends React.Component{
 	
+    componentWillMount(){
+        console.log("componentWillMount");
+    }
+
     componentDidMount(){
+
+        const {updateIndex, paneIndex} = this.props;
+        console.log("componentDidMount");
         
         $( ".pane" ).hammer().on( "swiperight", swipeRightHandler );
         $( ".pane" ).hammer().on( "swipeleft", swipeLeftHandler );
+        $( ".pane" ).hammer().on( "tap", tapHandler );
 
-        function swipeRightHandler( event ){
-            
+        function swipeRightHandler( event ){       
             $(this).animate({
                 right: '-3000px',
              }, 200, function(){
                 $(this).addClass('hidden');
+                updateIndex(1);
              });
         }
 
@@ -55,21 +54,27 @@ class SwipePane extends React.Component{
                 left: '-3000px'
              }, 200, function(){
                 $(this).addClass('hidden');
+                updateIndex(1);
              });
         }
 
+        function tapHandler(){
+            updateIndex(1);
+            $(this).remove();
+        }
     }
     render(){
 		const {paneContent, paneIndex} = this.props;
 		return(
-			<div className='pane'  id = { paneContent }>
-				{paneContent}
+			<div className='pane'  id = { paneIndex }>
+				{paneIndex}
 			</div>
 		);
 	}
 }
 
 class SwipeBody extends React.Component {
+    
     constructor(props) {
         super(props);
         this.state= initialState;
@@ -82,7 +87,6 @@ class SwipeBody extends React.Component {
     }
 
     componentWillMount() {
-        //console.log("!!!");
 
         let newMuiTheme = ThemeManager.modifyRawThemePalette(this.state.muiTheme, {
             accent1Color: Colors.deepOrange500,
@@ -99,18 +103,40 @@ class SwipeBody extends React.Component {
     	);
     }
 
+    renderSingleSwipePane(content){
+        
+        console.log("!!!!");
+        console.log(this.state.currentIndex);
+        console.log(this.state.currentIndex);
+        
+        return(
+            <SwipePane 
+                paneContent={this.state.currentIndex} 
+                paneIndex={this.state.currentIndex} 
+                updateIndex = {this.updateIndex.bind(this)} />
+        );
+
+        console.log("!!!!");
+    }
+
+    updateIndex(indexUpdate){
+        let index = this.state.currentIndex + indexUpdate;
+        this.setState({currentIndex: index});
+    }
+
     render() {
     	const contents = this.state.contents;
-        console.log(this.state.muiTheme);
-
+        console.log("XDD");
+        console.log(this.state.currentIndex);
         return (
             <div>
-                <AppBar
-                  title="Title"
-                  iconClassNameRight="muidocs-icon-navigation-expand-more" /> 
-                  <RaisedButton label="Default" />
+                <div style={{}}>
+                    <AppBar
+                      title="Swipo"
+                      iconClassNameRight="muidocs-icon-navigation-expand-more" /> 
+                </div>
             	<div> 
-            		{contents.map(this.renderSwipePane, this)}
+            		{this.renderSingleSwipePane()}
             	</div>
             </div>
         );

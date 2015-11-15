@@ -8,13 +8,14 @@ html, body{
 
 	& .pane{
 		top: 0;
-		height:400px;
+		height: 450px;
 		line-height: 400px;
 		font-size: 80px;
 		text-align: center;
 		display: block;
 		width: 100%;
 		position: relative;
+		background-color: green;
 	}
 
 	& .hidden{
