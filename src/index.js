@@ -44,8 +44,9 @@ class SwipePane extends React.Component{
             $(this).animate({
                 right: '-3000px',
              }, 200, function(){
-                $(this).addClass('hidden');
+                //$(this).addClass('hidden');
                 updateIndex(1);
+                $(this).css("right", "0");
              });
         }
 
@@ -53,14 +54,14 @@ class SwipePane extends React.Component{
             $(this).animate({
                 left: '-3000px'
              }, 200, function(){
-                $(this).addClass('hidden');
+                //$(this).addClass('hidden');
                 updateIndex(1);
+                $(this).css("left", "0");
              });
         }
 
         function tapHandler(){
-            updateIndex(1);
-            $(this).remove();
+            console.log("tapped!");
         }
     }
     render(){
@@ -105,9 +106,9 @@ class SwipeBody extends React.Component {
 
     renderSingleSwipePane(content){
         
-        console.log("!!!!");
-        console.log(this.state.currentIndex);
-        console.log(this.state.currentIndex);
+        //console.log("!!!!");
+        console.log("currentIndex: " + this.state.currentIndex);
+        //console.log(this.state.currentIndex);
         
         return(
             <SwipePane 
@@ -115,8 +116,6 @@ class SwipeBody extends React.Component {
                 paneIndex={this.state.currentIndex} 
                 updateIndex = {this.updateIndex.bind(this)} />
         );
-
-        console.log("!!!!");
     }
 
     updateIndex(indexUpdate){
@@ -126,8 +125,8 @@ class SwipeBody extends React.Component {
 
     render() {
     	const contents = this.state.contents;
-        console.log("XDD");
-        console.log(this.state.currentIndex);
+        //console.log("XDD");
+        //console.log(this.state.currentIndex);
         return (
             <div>
                 <div style={{}}>
